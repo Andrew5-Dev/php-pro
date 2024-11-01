@@ -1,0 +1,18 @@
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  example_db_vol:
+    driver: local
+
+services:
+  app:
+    image: "php:8.3-apache"
+    restart: "always"
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html
+    networks:
+      - app_network
