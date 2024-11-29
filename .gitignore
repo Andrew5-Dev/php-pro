@@ -9,3 +9,5 @@ build/
 *.log
 *.js.map
 *.d.ts
+
+/vendor/
