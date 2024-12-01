@@ -2,8 +2,7 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 
-
-use Classes\Tipes\Color;
+/*use Classes\Tipes\Color;
 use Classes\User;
 use Classes\UserException;
 
@@ -47,4 +46,4 @@ try {
 
 } catch (UserException $e) {
     echo "Помилка: " . $e->getMessage() . PHP_EOL;
-}
+}*/
