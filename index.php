@@ -1,6 +1,17 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
+use Classes\Patterns\FactoryMethodTaxi\Cars\EconomyCar;
+use Classes\Patterns\FactoryMethodTaxi\Orders\EconomyOrder;
+use Classes\Patterns\FactoryMethodTaxi\TaxiServices\EconomyTaxi;
+
+
+
+$economy_order = new EconomyOrder();
+$economy_car = $economy_order->getOrder()->getCar();
+var_dump($economy_car);
+
+
 
 /*use Classes\Tipes\Color;
 use Classes\User;
