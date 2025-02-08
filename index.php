@@ -1,15 +1,30 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Classes\Patterns\FactoryMethodTaxi\Cars\EconomyCar;
+
+use Classes\Patterns\Builder\Contact;
+
+$contact = new Contact();
+$newContact = $contact->phone('000-555-000')
+    ->name("John")
+    ->surname("Surname")
+    ->email("john@email.com")
+    ->address("Some address")
+    ->build();
+
+var_dump($newContact);
+
+
+/*use Classes\Patterns\FactoryMethodTaxi\Cars\EconomyCar;
 use Classes\Patterns\FactoryMethodTaxi\Orders\EconomyOrder;
 use Classes\Patterns\FactoryMethodTaxi\TaxiServices\EconomyTaxi;
 
 
 
+
 $economy_order = new EconomyOrder();
 $economy_car = $economy_order->getOrder()->getCar();
-var_dump($economy_car);
+var_dump($economy_car);*/
 
 
 
